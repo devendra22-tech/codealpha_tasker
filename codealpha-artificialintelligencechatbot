@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class AIChatBot {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=================================");
+        System.out.println("      JAVA AI CHATBOT");
+        System.out.println("=================================");
+        System.out.println("Type 'bye' to exit.\n");
+
+        while (true) {
+
+            System.out.print("You: ");
+            String userInput = sc.nextLine().toLowerCase();
+
+            // Exit Condition
+            if (userInput.equals("bye")) {
+                System.out.println("Bot: Goodbye! Have a great day.");
+                break;
+            }
+
+            // Greetings
+            else if (userInput.contains("hello") || userInput.contains("hi")) {
+                System.out.println("Bot: Hello! How can I help you?");
+            }
+
+            // Asking Name
+            else if (userInput.contains("your name")) {
+                System.out.println("Bot: I am a Java AI ChatBot.");
+            }
+
+            // Asking Time
+            else if (userInput.contains("time")) {
+                System.out.println("Bot: Sorry, I cannot check real-time clock yet.");
+            }
+
+            // Asking About Java
+            else if (userInput.contains("java")) {
+                System.out.println("Bot: Java is a powerful object-oriented programming language.");
+            }
+
+            // Asking About AI
+            else if (userInput.contains("ai")) {
+                System.out.println("Bot: AI stands for Artificial Intelligence.");
+            }
+
+            // Asking Mood
+            else if (userInput.contains("how are you")) {
+                System.out.println("Bot: I am functioning perfectly!");
+            }
+
+            // Default Response
+            else {
+                System.out.println("Bot: Sorry, I didn't understand that.");
+            }
+        }
+
+        sc.close();
+    }
+}
